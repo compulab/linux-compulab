@@ -53,6 +53,9 @@ Additional required properties for imx7d-pcie:
 - reset-names: Must contain the following entires:
 	       - "pciephy"
 	       - "apps"
+- fsl,pcie-phy-refclk-internal: If present then an internal PLL input is used
+  as PCIe PHY reference clock source. By default an external ocsillator input
+  is used.
 
 Example:
 
