@@ -36,6 +36,16 @@
 		enable-active-high;
 	};
 
+	reg_usbh_nreset: regulator-usbh-nrst {
+		compatible = "regulator-fixed";
+		regulator-name = "usb_host_nreset";
+		regulator-min-microvolt = <3300000>;
+		regulator-max-microvolt = <3300000>;
+		gpio = <&pca9555 6 GPIO_ACTIVE_LOW>;
+		enable-active-high;
+		regulator-always-on;
+	};
+
 	tsc2046reg: regulator-tsc {
 		compatible = "regulator-fixed";
 		regulator-name = "tsc2046-reg";
@@ -362,14 +372,6 @@
 		gpio-controller;
 		#gpio-cells = <2>;
 		reg = <0x20>;
-
-		/* USB Hub nRST */
-		usb_hub_nreset {
-			gpio-hog;
-			gpios = <6 GPIO_ACTIVE_HIGH>;
-			output-high;
-			line-name = "usb_hub_nreset";
-		};
 
 		/* WLAN RF Power enable GPIO */
 		rf_pwr_en_reg {
