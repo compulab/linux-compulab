@@ -13,8 +13,6 @@
 #include "imx7d-sbc-iot-imx7.dts"
 
 &iomuxc {
-	pinctrl-1 = <&pinctrl_xpen>;
-
 	pinctrl_uart7_rs485_hdx: uart7rs485hdxgrp {
 		fsl,pins = <
 			MX7D_PAD_ECSPI2_MOSI__UART7_DCE_TX	0x79 /* R485-TX */

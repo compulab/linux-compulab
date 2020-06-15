@@ -139,7 +139,7 @@
 };
 
 &iomuxc {
-	pinctrl-1 = <&pinctrl_xpen>;
+	pinctrl-0 = <&pinctrl_hog &pinctrl_xpen>;
 
 	/* SB-IOT-iMX7 Xpension Header P7 */
 	pinctrl_xpen: xpengrp {

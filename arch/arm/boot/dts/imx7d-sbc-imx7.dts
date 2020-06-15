@@ -205,8 +205,7 @@
 };
 
 &iomuxc {
-	pinctrl-names = "default";
-	pinctrl-0 = <&pinctrl_gpios>;
+	pinctrl-0 = <&pinctrl_hog &pinctrl_gpios>;
 
 	pinctrl_gpios: gpiosgrp {
 		fsl,pins = <
